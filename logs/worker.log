@@ -1094,3 +1094,139 @@ Error while reading from 127.0.0.1:11000 : (104, 'Connection reset by peer')
 2025-04-23 10:12:03,172 Result is kept for 600 seconds
 2025-04-23 10:14:01,149 Worker 7b8778445fa94fe396e3898cc8f097b6 [PID 7942]: warm shut down requested
 2025-04-23 10:14:01,152 Unsubscribing from channel rq:pubsub:7b8778445fa94fe396e3898cc8f097b6
+2025-04-23 10:41:58,137 Worker rq:worker:697a21e53da543d4928f207353c2da7d started with PID 11062, version 2.3.2
+2025-04-23 10:41:58,138 Subscribing to channel rq:pubsub:697a21e53da543d4928f207353c2da7d
+2025-04-23 10:41:58,140 *** Listening on home-fandresena-Documents-Eval-Erp:short, home-fandresena-Documents-Eval-Erp:default, home-fandresena-Documents-Eval-Erp:long...
+2025-04-23 10:41:58,141 Cleaning registries for queue: home-fandresena-Documents-Eval-Erp:short
+2025-04-23 10:41:58,143 Cleaning registries for queue: home-fandresena-Documents-Eval-Erp:default
+2025-04-23 10:41:58,147 Cleaning registries for queue: home-fandresena-Documents-Eval-Erp:long
+2025-04-23 10:42:20,224 Worker 697a21e53da543d4928f207353c2da7d [PID 11062]: warm shut down requested
+Traceback (most recent call last):
+  File "/home/fandresena/Documents/Eval/Erp/env/lib64/python3.13/site-packages/redis/connection.py", line 592, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "/home/fandresena/Documents/Eval/Erp/env/lib64/python3.13/site-packages/redis/_parsers/hiredis.py", line 128, in read_response
+    self.read_from_socket()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/fandresena/Documents/Eval/Erp/env/lib64/python3.13/site-packages/redis/_parsers/hiredis.py", line 88, in read_from_socket
+    bufflen = self._sock.recv_into(self._buffer)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/fandresena/Documents/Eval/Erp/apps/frappe/frappe/utils/bench_helper.py", line 48, in invoke
+    return super().invoke(ctx)
+           ~~~~~~~~~~~~~~^^^^^
+  File "/home/fandresena/Documents/Eval/Erp/env/lib64/python3.13/site-packages/click/core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/fandresena/Documents/Eval/Erp/env/lib64/python3.13/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fandresena/Documents/Eval/Erp/env/lib64/python3.13/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/fandresena/Documents/Eval/Erp/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+    ~~~~~~~~~~~~^
+    	queue,
+     ^^^^^^
+    ...<4 lines>...
+    	strategy=strategy,
+     ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/fandresena/Documents/Eval/Erp/apps/frappe/frappe/utils/background_jobs.py", line 341, in start_worker
+    worker.work(
+    ~~~~~~~~~~~^
+    	logging_level=logging_level,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    	with_scheduler=False,
+     ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/fandresena/Documents/Eval/Erp/env/lib64/python3.13/site-packages/rq/worker.py", line 649, in work
+    self.teardown()
+    ~~~~~~~~~~~~~^^
+  File "/home/fandresena/Documents/Eval/Erp/env/lib64/python3.13/site-packages/rq/worker.py", line 1150, in teardown
+    self.register_death()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/fandresena/Documents/Eval/Erp/env/lib64/python3.13/site-packages/rq/worker.py", line 897, in register_death
+    p.execute()
+    ~~~~~~~~~^^
+  File "/home/fandresena/Documents/Eval/Erp/env/lib64/python3.13/site-packages/redis/client.py", line 1524, in execute
+    conn = self.connection_pool.get_connection("MULTI", self.shard_hint)
+  File "/home/fandresena/Documents/Eval/Erp/env/lib64/python3.13/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/fandresena/Documents/Eval/Erp/env/lib64/python3.13/site-packages/redis/connection.py", line 369, in connect
+    self.on_connect()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/fandresena/Documents/Eval/Erp/env/lib64/python3.13/site-packages/redis/connection.py", line 471, in on_connect
+    self.read_response()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/fandresena/Documents/Eval/Erp/env/lib64/python3.13/site-packages/redis/connection.py", line 600, in read_response
+    raise ConnectionError(
+        f"Error while reading from {host_error}" f" : {e.args}"
+    )
+redis.exceptions.ConnectionError: Error while reading from 127.0.0.1:11000 : (104, 'Connection reset by peer')
+
+Error while reading from 127.0.0.1:11000 : (104, 'Connection reset by peer')
+2025-04-23 10:42:49,786 Worker rq:worker:a788cea63684456da04ffc482268d5c5 started with PID 11270, version 2.3.2
+2025-04-23 10:42:49,786 Subscribing to channel rq:pubsub:a788cea63684456da04ffc482268d5c5
+2025-04-23 10:42:49,788 *** Listening on home-fandresena-Documents-Eval-Erp:short, home-fandresena-Documents-Eval-Erp:default, home-fandresena-Documents-Eval-Erp:long...
+2025-04-23 10:42:49,789 Cleaning registries for queue: home-fandresena-Documents-Eval-Erp:short
+2025-04-23 10:42:49,792 Cleaning registries for queue: home-fandresena-Documents-Eval-Erp:default
+2025-04-23 10:42:49,794 Cleaning registries for queue: home-fandresena-Documents-Eval-Erp:long
+2025-04-23 10:44:00,411 home-fandresena-Documents-Eval-Erp:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.twofactor.delete_all_barcodes_for_users', 'scheduled_j..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') (erpnext.localhost||scheduled_job||0js99m3aj1)
+2025-04-23 10:44:01,244 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.twofactor.delete_all_barcodes_for_users', 'scheduled_j..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') job in 0:00:00.787046s on worker a788cea63684456da04ffc482268d5c5
+2025-04-23 10:44:01,244 home-fandresena-Documents-Eval-Erp:default: Job OK (erpnext.localhost||scheduled_job||0js99m3aj1)
+2025-04-23 10:44:01,244 Result is kept for 600 seconds
+2025-04-23 10:44:01,257 home-fandresena-Documents-Eval-Erp:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.email.doctype.email_account.email_account.notify_unrep..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') (erpnext.localhost||scheduled_job||0jsi7o57bc)
+2025-04-23 10:44:01,687 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.email.doctype.email_account.email_account.notify_unrep..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') job in 0:00:00.418891s on worker a788cea63684456da04ffc482268d5c5
+2025-04-23 10:44:01,687 home-fandresena-Documents-Eval-Erp:default: Job OK (erpnext.localhost||scheduled_job||0jsi7o57bc)
+2025-04-23 10:44:01,687 Result is kept for 600 seconds
+2025-04-23 10:44:01,699 home-fandresena-Documents-Eval-Erp:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.oauth.delete_oauth2_data', 'scheduled_job_type': '0jso..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') (erpnext.localhost||scheduled_job||0jsoaustu2)
+2025-04-23 10:44:02,395 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.oauth.delete_oauth2_data', 'scheduled_job_type': '0jso..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') job in 0:00:00.684209s on worker a788cea63684456da04ffc482268d5c5
+2025-04-23 10:44:02,395 home-fandresena-Documents-Eval-Erp:default: Job OK (erpnext.localhost||scheduled_job||0jsoaustu2)
+2025-04-23 10:44:02,395 Result is kept for 600 seconds
+2025-04-23 10:44:02,401 home-fandresena-Documents-Eval-Erp:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.integrations.doctype.google_calendar.google_calendar.s..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') (erpnext.localhost||scheduled_job||0jtrpech1f)
+2025-04-23 10:44:03,648 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.integrations.doctype.google_calendar.google_calendar.s..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') job in 0:00:01.239660s on worker a788cea63684456da04ffc482268d5c5
+2025-04-23 10:44:03,648 home-fandresena-Documents-Eval-Erp:default: Job OK (erpnext.localhost||scheduled_job||0jtrpech1f)
+2025-04-23 10:44:03,649 Result is kept for 600 seconds
+2025-04-23 10:44:03,655 home-fandresena-Documents-Eval-Erp:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.utils.global_search.sync_global_search', 'scheduled_jo..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') (erpnext.localhost||scheduled_job||0js418us01)
+2025-04-23 10:44:03,949 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.utils.global_search.sync_global_search', 'scheduled_jo..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') job in 0:00:00.284761s on worker a788cea63684456da04ffc482268d5c5
+2025-04-23 10:44:03,949 home-fandresena-Documents-Eval-Erp:default: Job OK (erpnext.localhost||scheduled_job||0js418us01)
+2025-04-23 10:44:03,949 Result is kept for 600 seconds
+2025-04-23 10:44:03,960 home-fandresena-Documents-Eval-Erp:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.monitor.flush', 'scheduled_job_type': '0jtr9tsh66'}, method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') (erpnext.localhost||scheduled_job||0jtr9tsh66)
+2025-04-23 10:44:04,270 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.monitor.flush', 'scheduled_job_type': '0jtr9tsh66'}, method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') job in 0:00:00.301521s on worker a788cea63684456da04ffc482268d5c5
+2025-04-23 10:44:04,270 home-fandresena-Documents-Eval-Erp:default: Job OK (erpnext.localhost||scheduled_job||0jtr9tsh66)
+2025-04-23 10:44:04,270 Result is kept for 600 seconds
+2025-04-23 10:44:04,277 home-fandresena-Documents-Eval-Erp:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.email.doctype.notification.notification.trigger_offset..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') (erpnext.localhost||scheduled_job||0jsh2rk8mo)
+2025-04-23 10:44:04,581 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.email.doctype.notification.notification.trigger_offset..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') job in 0:00:00.295845s on worker a788cea63684456da04ffc482268d5c5
+2025-04-23 10:44:04,581 home-fandresena-Documents-Eval-Erp:default: Job OK (erpnext.localhost||scheduled_job||0jsh2rk8mo)
+2025-04-23 10:44:04,581 Result is kept for 600 seconds
+2025-04-23 10:44:04,588 home-fandresena-Documents-Eval-Erp:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.email.doctype.email_account.email_account.pull', 'sche..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') (erpnext.localhost||scheduled_job||0jsj2tlqs8)
+2025-04-23 10:44:05,135 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.email.doctype.email_account.email_account.pull', 'sche..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') job in 0:00:00.539138s on worker a788cea63684456da04ffc482268d5c5
+2025-04-23 10:44:05,135 home-fandresena-Documents-Eval-Erp:default: Job OK (erpnext.localhost||scheduled_job||0jsj2tlqs8)
+2025-04-23 10:44:05,135 Result is kept for 600 seconds
+2025-04-23 10:44:05,141 home-fandresena-Documents-Eval-Erp:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.deferred_insert.save_to_db', 'scheduled_job_type': '0j..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') (erpnext.localhost||scheduled_job||0jsc70h4up)
+2025-04-23 10:44:05,491 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.deferred_insert.save_to_db', 'scheduled_job_type': '0j..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') job in 0:00:00.342627s on worker a788cea63684456da04ffc482268d5c5
+2025-04-23 10:44:05,491 home-fandresena-Documents-Eval-Erp:default: Job OK (erpnext.localhost||scheduled_job||0jsc70h4up)
+2025-04-23 10:44:05,491 Result is kept for 600 seconds
+2025-04-23 10:44:05,499 home-fandresena-Documents-Eval-Erp:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.website.doctype.web_page.web_page.check_publish_status..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') (erpnext.localhost||scheduled_job||0js1cbta39)
+2025-04-23 10:44:06,068 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.website.doctype.web_page.web_page.check_publish_status..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') job in 0:00:00.557761s on worker a788cea63684456da04ffc482268d5c5
+2025-04-23 10:44:06,068 home-fandresena-Documents-Eval-Erp:default: Job OK (erpnext.localhost||scheduled_job||0js1cbta39)
+2025-04-23 10:44:06,068 Result is kept for 600 seconds
+2025-04-23 10:44:06,075 home-fandresena-Documents-Eval-Erp:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.email.queue.flush', 'scheduled_job_type': '0jt2gl7p89'..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') (erpnext.localhost||scheduled_job||0jt2gl7p89)
+2025-04-23 10:44:06,566 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.email.queue.flush', 'scheduled_job_type': '0jt2gl7p89'..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') job in 0:00:00.482898s on worker a788cea63684456da04ffc482268d5c5
+2025-04-23 10:44:06,566 home-fandresena-Documents-Eval-Erp:default: Job OK (erpnext.localhost||scheduled_job||0jt2gl7p89)
+2025-04-23 10:44:06,566 Result is kept for 600 seconds
+2025-04-23 10:44:06,573 home-fandresena-Documents-Eval-Erp:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.core.doctype.prepared_report.prepared_report.expire_st..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') (erpnext.localhost||scheduled_job||0jst2ulj1e)
+2025-04-23 10:44:06,888 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.core.doctype.prepared_report.prepared_report.expire_st..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') job in 0:00:00.307252s on worker a788cea63684456da04ffc482268d5c5
+2025-04-23 10:44:06,888 home-fandresena-Documents-Eval-Erp:default: Job OK (erpnext.localhost||scheduled_job||0jst2ulj1e)
+2025-04-23 10:44:06,888 Result is kept for 600 seconds
+2025-04-23 10:44:06,894 home-fandresena-Documents-Eval-Erp:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.automation.doctype.reminder.reminder.send_reminders', ..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') (erpnext.localhost||scheduled_job||0jsfq52ncv)
+2025-04-23 10:44:07,232 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.automation.doctype.reminder.reminder.send_reminders', ..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erpnext.localhost', user='Administrator') job in 0:00:00.330275s on worker a788cea63684456da04ffc482268d5c5
+2025-04-23 10:44:07,232 home-fandresena-Documents-Eval-Erp:default: Job OK (erpnext.localhost||scheduled_job||0jsfq52ncv)
+2025-04-23 10:44:07,233 Result is kept for 600 seconds

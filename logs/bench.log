@@ -80,3 +80,14 @@
 2025-04-23 10:07:03,649 INFO /home/fandresena/.local/bin/bench worker
 2025-04-23 10:07:03,655 INFO /home/fandresena/.local/bin/bench watch
 2025-04-23 10:07:03,655 INFO /home/fandresena/.local/bin/bench schedule
+2025-04-23 10:41:48,770 INFO /home/fandresena/.local/bin/bench set-config -g developer_mode true
+2025-04-23 10:41:56,171 INFO /home/fandresena/.local/bin/bench start
+2025-04-23 10:41:56,670 INFO /home/fandresena/.local/bin/bench schedule
+2025-04-23 10:41:56,807 INFO /home/fandresena/.local/bin/bench watch
+2025-04-23 10:41:56,864 INFO /home/fandresena/.local/bin/bench worker
+2025-04-23 10:41:56,885 INFO /home/fandresena/.local/bin/bench serve --port 8000
+2025-04-23 10:42:47,254 INFO /home/fandresena/.local/bin/bench start
+2025-04-23 10:42:47,793 INFO /home/fandresena/.local/bin/bench serve --port 8000
+2025-04-23 10:42:48,066 INFO /home/fandresena/.local/bin/bench watch
+2025-04-23 10:42:48,081 INFO /home/fandresena/.local/bin/bench worker
+2025-04-23 10:42:48,140 INFO /home/fandresena/.local/bin/bench schedule
