@@ -1,0 +1,18 @@
+2025-04-22 22:11:09,261 ERROR frappe New Exception collected in error log
+Site: erpnext.localhost
+Form Dict: {'report_name': 'Lead Details', 'filters': '{"company":"IT University","from_date":"2024-04-22","to_date":"2025-04-22"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-22 22:11:09,261 ERROR frappe New Exception collected in error log
+Site: erpnext.localhost
+Form Dict: {'report_name': 'Lead Details', 'filters': '{"company":"IT University","from_date":"2024-04-22","to_date":"2025-04-22"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-22 22:11:09,271 ERROR frappe New Exception collected in error log
+Site: erpnext.localhost
+Form Dict: {'report_name': 'Lead Details', 'filters': '{"company":"IT University","from_date":"2024-04-22","to_date":"2025-04-22"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-22 22:11:09,271 ERROR frappe New Exception collected in error log
+Site: erpnext.localhost
+Form Dict: {'report_name': 'Lead Details', 'filters': '{"company":"IT University","from_date":"2024-04-22","to_date":"2025-04-22"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-22 22:11:26,463 ERROR frappe New Exception collected in error log
+Site: erpnext.localhost
+Form Dict: {'report_name': 'Lead Details', 'filters': '{"company":"IT University","from_date":"2024-04-22","to_date":"2025-04-22","status":"Open"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-22 22:11:26,463 ERROR frappe New Exception collected in error log
+Site: erpnext.localhost
+Form Dict: {'report_name': 'Lead Details', 'filters': '{"company":"IT University","from_date":"2024-04-22","to_date":"2025-04-22","status":"Open"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
