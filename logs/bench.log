@@ -91,3 +91,8 @@
 2025-04-23 10:42:48,066 INFO /home/fandresena/.local/bin/bench watch
 2025-04-23 10:42:48,081 INFO /home/fandresena/.local/bin/bench worker
 2025-04-23 10:42:48,140 INFO /home/fandresena/.local/bin/bench schedule
+2025-04-23 11:18:03,635 INFO /home/fandresena/.local/bin/bench start
+2025-04-23 11:18:04,567 INFO /home/fandresena/.local/bin/bench watch
+2025-04-23 11:18:04,605 INFO /home/fandresena/.local/bin/bench serve --port 8000
+2025-04-23 11:18:04,616 INFO /home/fandresena/.local/bin/bench worker
+2025-04-23 11:18:04,627 INFO /home/fandresena/.local/bin/bench schedule
